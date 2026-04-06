@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Loot Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">⚔️ D&D Loot Generator ⚔️</h1>
+            <p class="subtitle">Generate treasure based on Challenge Rating and rarity</p>
+        </header>
+
+        <main class="main-content">
+            <section class="controls">
+                <div class="control-group">
+                    <label for="cr-select" class="control-label">
+                        <span class="icon">🐉</span>
+                        Challenge Rating (CR)
+                    </label>
+                    <select id="cr-select" class="styled-select">
+                        <option value="">Select CR...</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">
+                        <span class="icon">💎</span>
+                        Item Rarity
+                    </label>
+                    <div class="rarity-buttons">
+                        <button class="rarity-btn" data-rarity="common">Common</button>
+                        <button class="rarity-btn" data-rarity="uncommon">Uncommon</button>
+                        <button class="rarity-btn" data-rarity="rare">Rare</button>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="generate-btn" disabled>
+                    <span class="btn-icon">🎲</span>
+                    Generate Loot
+                </button>
+            </section>
+
+            <section class="loot-display" id="loot-display">
+                <div class="loot-placeholder">
+                    <span class="placeholder-icon">📦</span>
+                    <p>Select CR and rarity to generate loot</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>May your rolls be ever in your favor! 🎲</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
