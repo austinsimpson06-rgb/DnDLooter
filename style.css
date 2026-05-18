@@ -11,6 +11,8 @@
     --common-color: #808080;
     --uncommon-color: #00FF00;
     --rare-color: #0080FF;
+    --very-rare-color: #800080;
+    --legendary-color: #FF8C00;
 }
 
 * {
@@ -177,6 +179,16 @@ body::before {
     border-color: var(--rare-color);
 }
 
+.rarity-btn[data-rarity="very_rare"].active {
+    background: var(--very-rare-color);
+    border-color: var(--very-rare-color);
+}
+
+.rarity-btn[data-rarity="legendary"].active {
+    background: var(--legendary-color);
+    border-color: var(--legendary-color);
+}
+
 .generate-btn {
     background: linear-gradient(135deg, var(--accent-color), #FFA500);
     color: var(--bg-dark);
@@ -287,6 +299,16 @@ body::before {
 
 .rarity-rare {
     background: var(--rare-color);
+    color: white;
+}
+
+.rarity-very_rare {
+    background: var(--very-rare-color);
+    color: white;
+}
+
+.rarity-legendary {
+    background: var(--legendary-color);
     color: white;
 }
 
